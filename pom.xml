@@ -3,4 +3,11 @@
   <groupId>CSC483_project</groupId>
   <artifactId>CSC483_project</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  <dependencies>
+  	<dependency>
+  		<groupId>edu.arizona.cs</groupId>
+  		<artifactId>hw3</artifactId>
+  		<version>1.0-SNAPSHOT</version>
+  	</dependency>
+  </dependencies>
 </project>

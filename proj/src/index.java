@@ -31,7 +31,8 @@ public class index {
 	StandardAnalyzer analyzer = new StandardAnalyzer();
 	Directory index = new ByteBuffersDirectory();
 	IndexWriterConfig config = new IndexWriterConfig(analyzer);
-	String inputFilePath ="wiki-example.txt";
+//	String inputFilePath ="wiki-example.txt";
+	String inputFilePath = "wikiFiles/enwiki-20140602-pages-articles.xml-0006.txt";
 	boolean indexExists = false;
 	private void buildIndex() {
 		// Get file from resources folder

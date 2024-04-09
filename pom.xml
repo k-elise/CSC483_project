@@ -3,11 +3,48 @@
   <groupId>CSC483_project</groupId>
   <artifactId>CSC483_project</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
+  <!-- Stuff added below -->
+  <!-- url changed to add "https" instead of "http" -->
+  <url>https://maven.apache.org</url>
+  
   <dependencies>
-  	<dependency>
-  		<groupId>edu.arizona.cs</groupId>
-  		<artifactId>hw3</artifactId>
-  		<version>1.0-SNAPSHOT</version>
-  	</dependency>
+    <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-core</artifactId>
+      <version>7.7.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-queryparser</artifactId>
+      <version>7.7.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.lucene</groupId>
+      <artifactId>lucene-analyzers-common</artifactId>
+      <version>7.7.1</version>
+    </dependency>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter-engine</artifactId>
+      <version>5.3.1</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
-</project>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>2.22.0</version>
+      </plugin>
+  </plugins>
+  </build>
+  </project>

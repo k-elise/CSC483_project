@@ -40,7 +40,8 @@ public class index {
 		boolean firstTitleFound = false;
 		String content = "";
 		ClassLoader classLoader = getClass().getClassLoader();
-		File file = new File(classLoader.getResource(inputFilePath).getFile());
+		// File file = new File(classLoader.getResource(inputFilePath).getFile());
+		File[] files = new File(classLoader.getResource("wikiFiles").getFile()).listFiles();
 		IndexWriter w = null;
 
 		try {
@@ -49,59 +50,65 @@ public class index {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		try (Scanner inputScanner = new Scanner(file)) {
-			while (inputScanner.hasNextLine()) {
-				String line = inputScanner.nextLine();
-				// Errors with parsing, initially trying to go by "[["" then grabbing index of
-				// "]]" but when "[[" existed and "]]" existed on lines that were not titles
-				// error occurred
-				if (line.indexOf("[[") == 0 && line.indexOf("]]") >= 0) {// if its the title
-					if (firstTitleFound) {
-						// try {
-						addDoc(w, content, title, cat);
-						title = line.substring(line.indexOf("[[") + 2, line.indexOf("]"));
-						// }
+		for (int i = 0; i < files.length; i++) {
+			try (Scanner inputScanner = new Scanner(files[i])) {
+				System.out.println("working on file " + i + ": " + files[i]);
+				while (inputScanner.hasNextLine()) {
+					String line = inputScanner.nextLine();
+
+					// Errors with parsing, initially trying to go by "[["" then grabbing index of
+					// "]]" but when "[[" existed and "]]" existed on lines that were not titles
+					// error occurred
+					if (line.indexOf("[[") == 0 && line.indexOf("]]") >= 0) {// if its the title
+						if (firstTitleFound) {
+							// try {
+							// System.out.println("categories: "+cat);
+							addDoc(w, content, title, cat);
+							title = line.substring(line.indexOf("[[") + 2, line.indexOf("]"));
+							// }
 //                    		catch(Exception e) {
 //                    			System.out.println("ERROR: "+line);
 //                    		}
 
-						// System.out.println("New Title: "+title);
-						// System.out.println("New Title: index : "+line.indexOf("[["));
+							// System.out.println("New Title: "+title);
+							// System.out.println("New Title: index : "+line.indexOf("[["));
 
-						// reset longString
+							// reset longString
 
-						firstTitleFound = true;
-						// save new title
-						// System.out.println(content);
-						content = "";
-					} else {// else this is the FIRST title
-							// save the new and FIRST title
+							firstTitleFound = true;
+							// save new title
+							// System.out.println(content);
+							content = "";
+							cat = "";
+						} else {// else this is the FIRST title
+								// save the new and FIRST title
 //                		try {
-						title = line.substring(line.indexOf("[[") + 2, line.indexOf("]"));
+							title = line.substring(line.indexOf("[[") + 2, line.indexOf("]"));
 //                		}
 //                		catch(Exception e) {
 //                		
 //                    			System.out.println("ERROR: "+line);
 //                		}
-						firstTitleFound = true;
-						// System.out.println("First Title index : "+line.indexOf("[["));
-						// System.out.println("First Title: "+title);
-						// System.out.println(content);
-					}
-				} else {// else its more content
-						// System.out.println("hiiii");
-					if (line.indexOf("C") == 0 && line.indexOf(":") == 10) {
-						cat = line.substring(11, line.length());
-						//System.out.println(cat);
+							firstTitleFound = true;
+							// System.out.println("First Title index : "+line.indexOf("[["));
+							// System.out.println("First Title: "+title);
+							// System.out.println(content);
+						}
+					} else {// else its more content
+							// System.out.println("hiiii");
+						if (line.indexOf("C") == 0 && line.indexOf(":") == 10) {
+							cat = line.substring(11, line.length());
+							// System.out.println(cat);
+						}
+
+						content += " " + line;
 					}
 
-					content += " " + line;
 				}
-
+				inputScanner.close();
+			} catch (IOException e) {
+				e.printStackTrace();
 			}
-			inputScanner.close();
-		} catch (IOException e) {
-			e.printStackTrace();
 		}
 		try {
 			addDoc(w, content, title, cat);
@@ -124,13 +131,22 @@ public class index {
 	}
 
 	public void runner() throws java.io.FileNotFoundException, java.io.IOException {
-
+		String [] qStrings = {"content:The dominant paper in our nation's capital, it's among the top 10 U.S. papers in circulation OR (category: NEWSPAPERS)^1.0",
+								"content:The practice of pre-authorizing presidential use of force dates to a 1955 resolution re: this island near mainland China OR (category: OLD YEAR'S RESOLUTIONS)^1.0"
+								,"content:Daniel Hertzberg & James B. Stewart of this paper shared a 1988 Pulitzer for their stories about insider trading OR (category:NEWSPAPERS)^1.0"
+								,"content:Song that says, \"you make me smile with my heart; your looks are laughable, unphotographable\" OR (category:BROADWAY LYRICS)^1.0"
+								
+		
+		};
+								
 		if (!indexExists) {
 			buildIndex();
 		}
 
 		try {
-			String querystr = "content:Irish";
+			for(int j = 0; j < qStrings.length; j++) {
+			//String querystr = "content:The dominant paper in our nation's capital, it's among the top 10 U.S. papers in circulation AND category: NEWSPAPERS";
+			String querystr = qStrings[j];
 			Query q = new QueryParser("content", analyzer).parse(querystr);
 			int hitsPerPage = 10;
 			IndexReader reader = DirectoryReader.open(index);
@@ -143,11 +159,15 @@ public class index {
 			for (int i = 0; i < hits.length; ++i) {
 				int docId = hits[i].doc;
 				Document d = searcher.doc(docId);
-				System.out.println((i + 1) + ". " + d.get("category")); //+ "\t" + hits[i].score);
+				System.out.println((i + 1) + ". " + d.get("title")); // + "\t" + hits[i].score);
 			}
-		} catch (ParseException e) {
+			}
+		}
+		catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
+		
+			
 		}
 
 	}

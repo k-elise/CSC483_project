@@ -1,11 +1,15 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.TokenStream;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
 import org.apache.lucene.document.StringField;
@@ -127,32 +131,66 @@ public class index {
 		System.out.println("Hello.");
 		index ind = new index();
 		// ind.buildIndex();
-		ind.runner();
+		int i = 0;
+		String category = "";
+		String content = "";
+		String answer = "";
+		int count = 0;
+		int total = 0;
+
+		try (Scanner inputScanner = new Scanner(new File("questions.txt"))) {
+
+			while (inputScanner.hasNextLine()) {
+				String line = inputScanner.nextLine();
+				//System.out.println("line: " + line + " I: " + i);
+				if (i == 0) {
+					category = line;
+					i++;
+				} else if (i == 1) {
+					content = line;
+					i++;
+				} else if (i == 2) {
+					answer = line;
+					i++;
+				} else {// if i = 3 , which is a new line
+					i = 0;
+					Analyzer analyzer = new StandardAnalyzer();
+					
+					content = tokenizeString(analyzer,content);
+					category = tokenizeString(analyzer,category);
+					
+					boolean found = ind.runner(category, content, answer);
+					if (found) {
+						count += 1;
+					}
+					total += 1;
+				}
+
+			}
+		}
+		System.out.println("FOUND " + count + " CORRECTLY OUT OF " + total);
+
 	}
 
-	public void runner() throws java.io.FileNotFoundException, java.io.IOException {
-		String [] qStrings = {"content:The dominant paper in our nation's capital, it's among the top 10 U.S. papers in circulation OR (category: NEWSPAPERS)^1.0",
-								"content:The practice of pre-authorizing presidential use of force dates to a 1955 resolution re: this island near mainland China OR (category: OLD YEAR'S RESOLUTIONS)^1.0"
-								,"content:Daniel Hertzberg & James B. Stewart of this paper shared a 1988 Pulitzer for their stories about insider trading OR (category:NEWSPAPERS)^1.0"
-								,"content:Song that says, \"you make me smile with my heart; your looks are laughable, unphotographable\" OR (category:BROADWAY LYRICS)^1.0"
-								
-		
-		};
-								
+	public boolean runner(String category, String content, String answer)
+			throws java.io.FileNotFoundException, java.io.IOException {
+		String querystr = "content: " + content + " category: " + category+"^2.0f";
+		IndexReader reader = null;
+		IndexSearcher searcher = null;
+		ScoreDoc[] hits = null;
 		if (!indexExists) {
+
 			buildIndex();
 		}
 
 		try {
-			for(int j = 0; j < qStrings.length; j++) {
-			//String querystr = "content:The dominant paper in our nation's capital, it's among the top 10 U.S. papers in circulation AND category: NEWSPAPERS";
-			String querystr = qStrings[j];
+
 			Query q = new QueryParser("content", analyzer).parse(querystr);
 			int hitsPerPage = 10;
-			IndexReader reader = DirectoryReader.open(index);
-			IndexSearcher searcher = new IndexSearcher(reader);
+			reader = DirectoryReader.open(index);
+			searcher = new IndexSearcher(reader);
 			TopDocs docs = searcher.search(q, hitsPerPage);
-			ScoreDoc[] hits = docs.scoreDocs;
+			hits = docs.scoreDocs;
 
 			// 4. display results
 			System.out.println("Found " + hits.length + " hits.");
@@ -161,15 +199,20 @@ public class index {
 				Document d = searcher.doc(docId);
 				System.out.println((i + 1) + ". " + d.get("title")); // + "\t" + hits[i].score);
 			}
+//			System.out.println("number 1:"+searcher.doc(hits[0].doc).get("title").trim());
+//			System.out.println("answer:"+answer.trim());
+//			System.out.println(searcher.doc(hits[0].doc).get("title").trim() == answer.trim());	
+			if (searcher.doc(hits[0].doc).get("title").trim().equals(answer.trim()) ){
+				return true;
 			}
-		}
-		catch (ParseException e) {
+			return false;
+
+		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		
-			
-		}
 
+		}
+		return false;
 	}
 
 	private static void addDoc(IndexWriter w, String content, String title, String category) throws IOException {
@@ -181,4 +224,22 @@ public class index {
 
 		w.addDocument(doc);
 	}
+	
+	public static String tokenizeString(Analyzer analyzer, String string) {
+		String result = "";
+	    try {
+	    	 result = "";
+	      TokenStream stream  = analyzer.tokenStream(null, new StringReader(string));
+	      stream.reset();
+	      while (stream.incrementToken()) {
+	        result+=(stream.getAttribute(CharTermAttribute.class).toString())+" ";
+	      }
+	      stream.close();
+	    } catch (IOException e) {
+	      // not thrown b/c we're using a string reader...
+	      throw new RuntimeException(e);
+	    }
+	    
+	    return result;
+	  }
 }

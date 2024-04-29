@@ -32,6 +32,8 @@ import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.search.similarities.BM25Similarity;
+import org.apache.lucene.search.similarities.ClassicSimilarity;
+import org.apache.lucene.search.similarities.TFIDFSimilarity;
 import org.apache.lucene.store.Directory;
 
 import org.apache.lucene.store.ByteBuffersDirectory;
@@ -41,6 +43,7 @@ public class index {
 	StandardAnalyzer analyzer = new StandardAnalyzer();
 	Directory index = new ByteBuffersDirectory();
 	IndexWriterConfig config = new IndexWriterConfig(analyzer);
+	
 	//config.setSimilarity(new BM25Similarity());
 //	String inputFilePath ="wiki-example.txt";
 	String inputFilePath = "wikiFiles/enwiki-20140602-pages-articles.xml-0006.txt";
@@ -53,6 +56,7 @@ public class index {
 		boolean firstTitleFound = false;
 		String content = "";
 		ClassLoader classLoader = getClass().getClassLoader();
+		config.setSimilarity(new BM25Similarity());
 		// File file = new File(classLoader.getResource(inputFilePath).getFile());
 		File[] files = new File(classLoader.getResource("wikiFiles").getFile()).listFiles();
 		IndexWriter w = null;
@@ -77,8 +81,8 @@ public class index {
 							// try {
 							// System.out.println("categories: "+cat);
 							//content = removeStopWords(content);
-							content = content.toLowerCase();
-							cat = cat.toLowerCase();
+//							content = content.toLowerCase();
+//							cat = cat.toLowerCase();
 							addDoc(w, content, title, cat);
 							title = line.substring(line.indexOf("[[") + 2, line.indexOf("]"));
 							// }
@@ -116,9 +120,10 @@ public class index {
 							cat = line.substring(11, line.length());
 							// System.out.println(cat);
 						}
+					
 							content += " " + line;
 						
-
+					
 						
 					}
 
@@ -154,7 +159,7 @@ public class index {
 		String answer = "";
 		int count = 0;
 		int total = 0;
-
+		double sum = 0;
 		try (Scanner inputScanner = new Scanner(new File("questions.txt"))) {
 
 			while (inputScanner.hasNextLine()) {
@@ -177,26 +182,30 @@ public class index {
 					content = (tokenizeString(analyzer,content));
 					category = category.split("\\(")[0];
 					category = tokenizeString(analyzer,category);
-					
-					boolean found = ind.runner(category, content, answer);
-					if (found) {
-						count += 1;
+					System.out.println("RUNNING QUERY "+total);
+					double curRank = ind.runner(category, content, answer);
+					if(curRank!= 0) {
+						curRank = 1/curRank;
 					}
+					
+					sum = curRank+sum;
 					total += 1;
 				}
 
 			}
 		}
-		System.out.println("FOUND " + count + " CORRECTLY OUT OF " + total);
+		System.out.println("MRR SCORE: "+(double)(sum/total));
 
 	}
 
-	public boolean runner(String category, String content, String answer)
+	public int runner(String category, String content, String answer)
 			throws java.io.FileNotFoundException, java.io.IOException {
-		String querystr = "content: " + content.toLowerCase() + " category: " + category.toLowerCase();
+		String querystr = "content: " + content + " category: " + category;
 		IndexReader reader = null;
 		IndexSearcher searcher = null;
 		ScoreDoc[] hits = null;
+	
+		int rank =0;
 		if (!indexExists) {
 
 			buildIndex();
@@ -209,29 +218,33 @@ public class index {
 			reader = DirectoryReader.open(index);
 			searcher = new IndexSearcher(reader);
 			TopDocs docs = searcher.search(q, hitsPerPage);
+			searcher.setSimilarity(new BM25Similarity());
 			hits = docs.scoreDocs;
 
 			// 4. display results
-			System.out.println("Found " + hits.length + " hits.");
+			//System.out.println("Found " + hits.length + " hits.");
 			for (int i = 0; i < hits.length; ++i) {
 				int docId = hits[i].doc;
 				Document d = searcher.doc(docId);
-				System.out.println((i + 1) + ". " + d.get("title")); // + "\t" + hits[i].score);
+				//System.out.println((i + 1) + ". " + d.get("title")); // + "\t" + hits[i].score);
+				if(d.get("title").trim().equals(answer.trim())) {
+					rank = i+1;
+				}
 			}
 //			System.out.println("number 1:"+searcher.doc(hits[0].doc).get("title").trim());
 //			System.out.println("answer:"+answer.trim());
 //			System.out.println(searcher.doc(hits[0].doc).get("title").trim() == answer.trim());	
-			if (searcher.doc(hits[0].doc).get("title").trim().equals(answer.trim()) ){
-				return true;
-			}
-			return false;
+			
+				System.out.println("Answer is :"+answer+" Rank is :"+rank);
+			return rank;
 
 		} catch (ParseException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 
 		}
-		return false;
+		System.out.println("Answer is :"+answer+" Rank is :"+rank);
+		return rank;
 	}
 	
 	

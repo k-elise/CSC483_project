@@ -5,6 +5,8 @@ import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.lucene.analysis.Analyzer;
 import org.apache.lucene.analysis.CharArraySet;
@@ -40,7 +42,7 @@ import org.apache.lucene.store.ByteBuffersDirectory;
 
 public class index {
 
-	StandardAnalyzer analyzer = new StandardAnalyzer();
+	Analyzer analyzer = new  EnglishAnalyzer();
 	Directory index = new ByteBuffersDirectory();
 	IndexWriterConfig config = new IndexWriterConfig(analyzer);
 	
@@ -83,7 +85,13 @@ public class index {
 							//content = removeStopWords(content);
 //							content = content.toLowerCase();
 //							cat = cat.toLowerCase();
+					//		System.out.println(content);
+							content = removeStopWords(tokenizeString(analyzer, content));
+							cat = removeStopWords((tokenizeString(analyzer, cat)));
+//							System.out.println("-------------------------------------------------");
+//							System.out.println(content);
 							addDoc(w, content, title, cat);
+						
 							title = line.substring(line.indexOf("[[") + 2, line.indexOf("]"));
 							// }
 //                    		catch(Exception e) {
@@ -100,6 +108,7 @@ public class index {
 							// System.out.println(content);
 							content = "";
 							cat = "";
+						
 						} else {// else this is the FIRST title
 								// save the new and FIRST title
 //                		try {
@@ -116,10 +125,15 @@ public class index {
 						}
 					} else {// else its more content
 							// System.out.println("hiiii");
+//						Pattern plink = Pattern.compile("==+(.*?)+==");
+//						Matcher m = plink.matcher(line);
 						if (line.indexOf("C") == 0 && line.indexOf(":") == 10) {
 							cat = line.substring(11, line.length());
 							// System.out.println(cat);
 						}
+//						if (m.find()) {
+//							cat += ", " + m.group(1);
+//						}
 					
 							content += " " + line;
 						
@@ -152,14 +166,16 @@ public class index {
 	public static void main(String[] args) throws Exception {
 		System.out.println("Hello.");
 		index ind = new index();
-		// ind.buildIndex();
+		 //ind.buildIndex();
 		int i = 0;
 		String category = "";
 		String content = "";
 		String answer = "";
 		int count = 0;
 		int total = 0;
+	//	Analyzer analyzer = new StandardAnalyzer();
 		double sum = 0;
+		//System.out.println(tokenizeString(analyzer,"Pierre Cauchon, Bishop of Beauvais, presided over the trial of this woman who went up in smoke May 30, 1431"));
 		try (Scanner inputScanner = new Scanner(new File("questions.txt"))) {
 
 			while (inputScanner.hasNextLine()) {
@@ -176,12 +192,12 @@ public class index {
 					i++;
 				} else {// if i = 3 , which is a new line
 					i = 0;
-					Analyzer analyzer = new StandardAnalyzer();
+					Analyzer analyzer = new EnglishAnalyzer();
 					
 				//	content = removeStopWords(tokenizeString(analyzer,content));
-					content = (tokenizeString(analyzer,content));
+					content = removeStopWords((tokenizeString(analyzer,content)));
 					category = category.split("\\(")[0];
-					category = tokenizeString(analyzer,category);
+					category = removeStopWords(tokenizeString(analyzer,category));
 					System.out.println("RUNNING QUERY "+total);
 					double curRank = ind.runner(category, content, answer);
 					if(curRank!= 0) {
@@ -195,12 +211,13 @@ public class index {
 			}
 		}
 		System.out.println("MRR SCORE: "+(double)(sum/total));
-
+			//System.out.println("GOT "+sum+" OUT OF "+total);
 	}
 
 	public int runner(String category, String content, String answer)
 			throws java.io.FileNotFoundException, java.io.IOException {
-		String querystr = "content: " + content + " category: " + category;
+	String querystr = "content: " + content + " category: " + category;
+		//String querystr = "(content: " + content + " category: " + category+")^2.0f OR content: " + content ;
 		IndexReader reader = null;
 		IndexSearcher searcher = null;
 		ScoreDoc[] hits = null;
@@ -222,19 +239,23 @@ public class index {
 			hits = docs.scoreDocs;
 
 			// 4. display results
-			//System.out.println("Found " + hits.length + " hits.");
+			System.out.println("Found " + hits.length + " hits.");
 			for (int i = 0; i < hits.length; ++i) {
 				int docId = hits[i].doc;
 				Document d = searcher.doc(docId);
-				//System.out.println((i + 1) + ". " + d.get("title")); // + "\t" + hits[i].score);
+				System.out.println((i + 1) + ". " + d.get("title")); // + "\t" + hits[i].score);
 				if(d.get("title").trim().equals(answer.trim())) {
-					rank = i+1;
+					
+						rank = i+1;
+					
 				}
 			}
 //			System.out.println("number 1:"+searcher.doc(hits[0].doc).get("title").trim());
 //			System.out.println("answer:"+answer.trim());
 //			System.out.println(searcher.doc(hits[0].doc).get("title").trim() == answer.trim());	
-			
+//			if(searcher.doc(hits[0].doc).get("title").trim() == answer.trim()) {
+//				rank = 1;
+//			}
 				System.out.println("Answer is :"+answer+" Rank is :"+rank);
 			return rank;
 
@@ -280,7 +301,7 @@ public class index {
 		String answer = "";
 	    CharArraySet stopWords = EnglishAnalyzer.getDefaultStopSet();
 	   // TokenStream tokenStream = new StandardTokenizer();
-	    Analyzer analyzer = new StandardAnalyzer(stopWords);
+	    Analyzer analyzer = new  EnglishAnalyzer(stopWords);
 	    TokenStream tokenStream = analyzer.tokenStream(null, new StringReader(textFile));
 	    CharTermAttribute term = tokenStream.addAttribute(CharTermAttribute.class);
 	    tokenStream.reset();
@@ -290,6 +311,7 @@ public class index {
 	        answer+= terms + " ";
 	    }
 	    tokenStream .close();
+	    
 	    return answer;
 	}
 	

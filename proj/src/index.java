@@ -20,9 +20,12 @@ import org.apache.lucene.index.IndexWriter;
 import org.apache.lucene.index.IndexWriterConfig;
 import org.apache.lucene.queryparser.classic.ParseException;
 import org.apache.lucene.queryparser.classic.QueryParser;
+import org.apache.lucene.search.BoostQuery;
+import org.apache.lucene.search.DisjunctionMaxQuery;
 import org.apache.lucene.search.IndexSearcher;
 import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
+import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
 import org.apache.lucene.store.Directory;
 
@@ -214,7 +217,8 @@ public class index {
 		}
 		return false;
 	}
-
+	
+	
 	private static void addDoc(IndexWriter w, String content, String title, String category) throws IOException {
 		Document doc = new Document();
 		doc.add(new TextField("content", content, Field.Store.YES));

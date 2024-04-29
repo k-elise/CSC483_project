@@ -7,8 +7,12 @@ import java.util.List;
 import java.util.Scanner;
 
 import org.apache.lucene.analysis.Analyzer;
+import org.apache.lucene.analysis.CharArraySet;
+import org.apache.lucene.analysis.StopFilter;
 import org.apache.lucene.analysis.TokenStream;
+import org.apache.lucene.analysis.en.EnglishAnalyzer;
 import org.apache.lucene.analysis.standard.StandardAnalyzer;
+import org.apache.lucene.analysis.standard.StandardTokenizer;
 import org.apache.lucene.analysis.tokenattributes.CharTermAttribute;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.document.Field;
@@ -27,6 +31,7 @@ import org.apache.lucene.search.Query;
 import org.apache.lucene.search.ScoreDoc;
 import org.apache.lucene.search.TermQuery;
 import org.apache.lucene.search.TopDocs;
+import org.apache.lucene.search.similarities.BM25Similarity;
 import org.apache.lucene.store.Directory;
 
 import org.apache.lucene.store.ByteBuffersDirectory;
@@ -36,6 +41,7 @@ public class index {
 	StandardAnalyzer analyzer = new StandardAnalyzer();
 	Directory index = new ByteBuffersDirectory();
 	IndexWriterConfig config = new IndexWriterConfig(analyzer);
+	//config.setSimilarity(new BM25Similarity());
 //	String inputFilePath ="wiki-example.txt";
 	String inputFilePath = "wikiFiles/enwiki-20140602-pages-articles.xml-0006.txt";
 	boolean indexExists = false;
@@ -70,6 +76,9 @@ public class index {
 						if (firstTitleFound) {
 							// try {
 							// System.out.println("categories: "+cat);
+							//content = removeStopWords(content);
+							content = content.toLowerCase();
+							cat = cat.toLowerCase();
 							addDoc(w, content, title, cat);
 							title = line.substring(line.indexOf("[[") + 2, line.indexOf("]"));
 							// }
@@ -107,13 +116,18 @@ public class index {
 							cat = line.substring(11, line.length());
 							// System.out.println(cat);
 						}
+							content += " " + line;
+						
 
-						content += " " + line;
+						
 					}
 
 				}
 				inputScanner.close();
 			} catch (IOException e) {
+				e.printStackTrace();
+			} catch (Exception e) {
+				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -130,7 +144,7 @@ public class index {
 		indexExists = true;
 	}
 
-	public static void main(String[] args) throws FileNotFoundException, IOException {
+	public static void main(String[] args) throws Exception {
 		System.out.println("Hello.");
 		index ind = new index();
 		// ind.buildIndex();
@@ -159,7 +173,9 @@ public class index {
 					i = 0;
 					Analyzer analyzer = new StandardAnalyzer();
 					
-					content = tokenizeString(analyzer,content);
+				//	content = removeStopWords(tokenizeString(analyzer,content));
+					content = (tokenizeString(analyzer,content));
+					category = category.split("\\(")[0];
 					category = tokenizeString(analyzer,category);
 					
 					boolean found = ind.runner(category, content, answer);
@@ -177,7 +193,7 @@ public class index {
 
 	public boolean runner(String category, String content, String answer)
 			throws java.io.FileNotFoundException, java.io.IOException {
-		String querystr = "content: " + content + " category: " + category+"^2.0f";
+		String querystr = "content: " + content.toLowerCase() + " category: " + category.toLowerCase();
 		IndexReader reader = null;
 		IndexSearcher searcher = null;
 		ScoreDoc[] hits = null;
@@ -246,4 +262,22 @@ public class index {
 	    
 	    return result;
 	  }
+	
+	public static String removeStopWords(String textFile) throws Exception {
+		String answer = "";
+	    CharArraySet stopWords = EnglishAnalyzer.getDefaultStopSet();
+	   // TokenStream tokenStream = new StandardTokenizer();
+	    Analyzer analyzer = new StandardAnalyzer(stopWords);
+	    TokenStream tokenStream = analyzer.tokenStream(null, new StringReader(textFile));
+	    CharTermAttribute term = tokenStream.addAttribute(CharTermAttribute.class);
+	    tokenStream.reset();
+	 
+	    while (tokenStream.incrementToken()) {
+	        String terms = (tokenStream.getAttribute(CharTermAttribute.class).toString());
+	        answer+= terms + " ";
+	    }
+	    tokenStream .close();
+	    return answer;
+	}
+	
 }

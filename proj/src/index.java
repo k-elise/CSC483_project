@@ -51,14 +51,14 @@ public class index {
 	String inputFilePath = "wikiFiles/enwiki-20140602-pages-articles.xml-0006.txt";
 	boolean indexExists = false;
 	String cat = "";
-
+	boolean referenceing = false;
 	private void buildIndex() {
 		// Get file from resources folder
 		String title = "";
 		boolean firstTitleFound = false;
 		String content = "";
 		ClassLoader classLoader = getClass().getClassLoader();
-		config.setSimilarity(new BM25Similarity());
+		config.setSimilarity(new ClassicSimilarity());
 		// File file = new File(classLoader.getResource(inputFilePath).getFile());
 		File[] files = new File(classLoader.getResource("wikiFiles").getFile()).listFiles();
 		IndexWriter w = null;
@@ -86,8 +86,10 @@ public class index {
 //							content = content.toLowerCase();
 //							cat = cat.toLowerCase();
 					//		System.out.println(content);
-							content = removeStopWords(tokenizeString(analyzer, content));
-							cat = removeStopWords((tokenizeString(analyzer, cat)));
+						
+						
+							content = removeStopWords(content);
+							cat = removeStopWords(cat);
 //							System.out.println("-------------------------------------------------");
 //							System.out.println(content);
 							addDoc(w, content, title, cat);
@@ -134,6 +136,7 @@ public class index {
 //						if (m.find()) {
 //							cat += ", " + m.group(1);
 //						}
+							
 					
 							content += " " + line;
 						
@@ -194,9 +197,9 @@ public class index {
 					i = 0;
 					// tokenizing, removing stopwords on the content and queries
 					Analyzer analyzer = new EnglishAnalyzer();
-					content = removeStopWords((tokenizeString(analyzer,content)));
+					content = removeStopWords(content);
 					category = category.split("\\(")[0];// removing the (alex: ... ) part of the categories
-					category = removeStopWords(tokenizeString(analyzer,category)); 
+					category = removeStopWords(category); 
 					System.out.println("RUNNING QUERY "+total);
 					double curRank = ind.runner(category, content, answer);
 					if(curRank!= 0) {// taking the reciprocal of the current rank ( 0 stays as 0 )
@@ -215,7 +218,8 @@ public class index {
 
 	public int runner(String category, String content, String answer)
 			throws java.io.FileNotFoundException, java.io.IOException {
-	String querystr = "content: " + content + " category: " + category;// query searching the content and category
+		content = content+" "+category;
+	String querystr = "content: " + content ;// query searching the content and category
 		//String querystr = "(content: " + content + " category: " + category+")^2.0f OR content: " + content ;
 		IndexReader reader = null;
 		IndexSearcher searcher = null;
@@ -223,18 +227,18 @@ public class index {
 	
 		int rank =0;// setting the base rank if not found then its 0 
 		if (!indexExists) {
-
+			
 			buildIndex();
 		}
 
 		try {
 
 			Query q = new QueryParser("content", analyzer).parse(querystr);
-			int hitsPerPage = 10;// getting top 10 hits for the query 
+			int hitsPerPage = 100;// getting top 10 hits for the query 
 			reader = DirectoryReader.open(index);
 			searcher = new IndexSearcher(reader);
 			TopDocs docs = searcher.search(q, hitsPerPage);
-			searcher.setSimilarity(new BM25Similarity());
+			searcher.setSimilarity(new  ClassicSimilarity());
 			hits = docs.scoreDocs;
 
 			// 4. display results
@@ -243,11 +247,21 @@ public class index {
 				int docId = hits[i].doc;
 				Document d = searcher.doc(docId);
 				System.out.println((i + 1) + ". " + d.get("title")); // + "\t" + hits[i].score);
-				if(d.get("title").trim().equals(answer.trim())) {// if the document in the top 10 is the right answer
-					
-						rank = i+1;// its rank is its position +1 ( base 1 indexing)
-	
-				}
+				if(answer.split("\\|").length>0) {
+	                
+                    for(String s : answer.split("\\|")) {
+                        if(d.get("title").trim().equals(s.trim())) {// if the document in the top 10 is the right answer
+                            
+                            rank = i+1;// its rank is its position +1 ( base 1 indexing)
+                            break;
+                    }
+                    }
+                }
+                else if(d.get("title").trim().equals(answer.trim())) {// if the document in the top 10 is the right answer
+                    
+                        rank = i+1;// its rank is its position +1 ( base 1 indexing)
+    
+                }
 			}
 //			System.out.println("number 1:"+searcher.doc(hits[0].doc).get("title").trim());
 //			System.out.println("answer:"+answer.trim());
@@ -313,72 +327,5 @@ public class index {
 	    
 	    return answer;
 	}
-
-	private static String getFrequency(String contents) throws IOException {
-		
-		Map<String, Integer> termFrequencyMap = new HashMap<>();
-
-		
-		CharArraySet stops = EnglishAnalyzer.getDefaultStopSet();
-		Analyzer anl = new EnglishAnalyzer(stops);
-//		TokenStream tokenStream = anl.tokenStream(null, new StringReader(contents));
-//		CharTermAttribute charTermAttribute = tokenStream.addAttribute(CharTermAttribute.class);
-//	    tokenStream.reset();
-//	    
-//	    while (tokenStream.incrementToken()) {
-//	    	String term = charTermAttribute.toString();
-//            termFrequencyMap.put(term, termFrequencyMap.getOrDefault(term, 0) + 1);
-//
-//	    }
-		try (StandardTokenizer tokenizer = new StandardTokenizer()) {
-		tokenizer.setReader(new StringReader(contents));
-		tokenizer.reset();
-		
-		LowerCaseFilter lowerCaseFilter = new LowerCaseFilter(tokenizer);
-		CharTermAttribute charTermAttribute = lowerCaseFilter.addAttribute(CharTermAttribute.class);
-		
-		while (lowerCaseFilter.incrementToken()) {
-		    String term = charTermAttribute.toString();
-		    if (!stops.contains(term)) {
-			termFrequencyMap.put(term, termFrequencyMap.getOrDefault(term, 0) + 1);
-		    }
-		}
-		
-		tokenizer.end();
-		}
-
-//        try (StandardTokenizer tokenizer = new StandardTokenizer()) {
-//            tokenizer.setReader(new StringReader(contents));
-//            tokenizer.reset();
-//
-//            LowerCaseFilter lowerCaseFilter = new LowerCaseFilter(tokenizer);
-//            CharTermAttribute charTermAttribute = tokenizer.addAttribute(CharTermAttribute.class);
-//
-//            while (tokenizer.incrementToken()) {
-//                String term = charTermAttribute.toString();
-//                termFrequencyMap.put(term, termFrequencyMap.getOrDefault(term, 0) + 1);
-//            }
-//
-//            tokenizer.end();
-//        }
-        
-        Map<String, Integer> top10FrequentWords = termFrequencyMap.entrySet()
-                .stream()
-                .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
-                .limit(10)
-                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, HashMap::new));
-        System.out.println(top10FrequentWords);
-		
-        String words = "";
-        
-        for (Map.Entry<String, Integer> entry : top10FrequentWords.entrySet()) {
-            System.out.println(entry.getKey() + ": " + entry.getValue());
-            words += entry.getKey() +" ";
-        }
-        words.trim();
-        return words;
-	}
-	
-}
 	
 }

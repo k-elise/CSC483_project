@@ -211,6 +211,20 @@ public class index {
 				}
 
 			}
+			
+			Analyzer analyzer = new EnglishAnalyzer();
+			content = removeStopWords(content);
+			category = category.split("\\(")[0];// removing the (alex: ... ) part of the categories
+			category = removeStopWords(category); 
+			System.out.println("RUNNING QUERY "+total);
+			double curRank = ind.runner(category, content, answer);
+			if(curRank!= 0) {// taking the reciprocal of the current rank ( 0 stays as 0 )
+				curRank = 1/curRank;
+			}
+			
+			sum = curRank+sum;// adding reciprocal to the sum
+			total += 1;// counting the number of querues
+			
 		}
 		System.out.println("MRR SCORE: "+(double)(sum/total));// printing out the MRR , reciprocal sum / number of queries
 			//System.out.println("GOT "+sum+" OUT OF "+total);
@@ -234,7 +248,7 @@ public class index {
 		try {
 
 			Query q = new QueryParser("content", analyzer).parse(querystr);
-			int hitsPerPage = 100;// getting top 10 hits for the query 
+			int hitsPerPage = 10;// getting top 10 hits for the query 
 			reader = DirectoryReader.open(index);
 			searcher = new IndexSearcher(reader);
 			TopDocs docs = searcher.search(q, hitsPerPage);

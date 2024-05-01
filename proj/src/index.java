@@ -313,5 +313,72 @@ public class index {
 	    
 	    return answer;
 	}
+
+	private static String getFrequency(String contents) throws IOException {
+		
+		Map<String, Integer> termFrequencyMap = new HashMap<>();
+
+		
+		CharArraySet stops = EnglishAnalyzer.getDefaultStopSet();
+		Analyzer anl = new EnglishAnalyzer(stops);
+//		TokenStream tokenStream = anl.tokenStream(null, new StringReader(contents));
+//		CharTermAttribute charTermAttribute = tokenStream.addAttribute(CharTermAttribute.class);
+//	    tokenStream.reset();
+//	    
+//	    while (tokenStream.incrementToken()) {
+//	    	String term = charTermAttribute.toString();
+//            termFrequencyMap.put(term, termFrequencyMap.getOrDefault(term, 0) + 1);
+//
+//	    }
+		try (StandardTokenizer tokenizer = new StandardTokenizer()) {
+		tokenizer.setReader(new StringReader(contents));
+		tokenizer.reset();
+		
+		LowerCaseFilter lowerCaseFilter = new LowerCaseFilter(tokenizer);
+		CharTermAttribute charTermAttribute = lowerCaseFilter.addAttribute(CharTermAttribute.class);
+		
+		while (lowerCaseFilter.incrementToken()) {
+		    String term = charTermAttribute.toString();
+		    if (!stops.contains(term)) {
+			termFrequencyMap.put(term, termFrequencyMap.getOrDefault(term, 0) + 1);
+		    }
+		}
+		
+		tokenizer.end();
+		}
+
+//        try (StandardTokenizer tokenizer = new StandardTokenizer()) {
+//            tokenizer.setReader(new StringReader(contents));
+//            tokenizer.reset();
+//
+//            LowerCaseFilter lowerCaseFilter = new LowerCaseFilter(tokenizer);
+//            CharTermAttribute charTermAttribute = tokenizer.addAttribute(CharTermAttribute.class);
+//
+//            while (tokenizer.incrementToken()) {
+//                String term = charTermAttribute.toString();
+//                termFrequencyMap.put(term, termFrequencyMap.getOrDefault(term, 0) + 1);
+//            }
+//
+//            tokenizer.end();
+//        }
+        
+        Map<String, Integer> top10FrequentWords = termFrequencyMap.entrySet()
+                .stream()
+                .sorted(Map.Entry.<String, Integer>comparingByValue().reversed())
+                .limit(10)
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, (e1, e2) -> e1, HashMap::new));
+        System.out.println(top10FrequentWords);
+		
+        String words = "";
+        
+        for (Map.Entry<String, Integer> entry : top10FrequentWords.entrySet()) {
+            System.out.println(entry.getKey() + ": " + entry.getValue());
+            words += entry.getKey() +" ";
+        }
+        words.trim();
+        return words;
+	}
+	
+}
 	
 }

@@ -2,19 +2,27 @@
 ------------
 
 Authors: Kendra Jones, Noelle Healey-Stewart, Josiah Lane 
+
 Date: 5/1/2024
+
 (happy last day of class!)
 
 
 ## Notes
 
-
 This code was tested, viewed, and written in Eclipse.
 
+If the files are imported into an IDE, please import as a Maven Project.
+To execute our code, please type "java index.java" in the command line, or if using Eclipse/other Java IDE simply hit "Run as Java project."
+
+To read the output, please open the specific textfile. It will output every wikiFile ran and then give the top rankings, the results, and the score.
+
+To view our document and/or powerpoint, please go to documents/final_docs
 
 
 ## Included files
 * questions.txt - Textfile containing text questions.
+* MRRTenOutput.txt - Textfile containing results for MRR @ 10
 * pom.xml - To build project in Maven.
 * README.md - File containing relevant information regarding project.
 * documents - A file holding actual code for project and other items.
@@ -22,3 +30,4 @@ This code was tested, viewed, and written in Eclipse.
 * documents/src/index.java - Watson Project that implements our try at solving Jeopardy. 
 * documents/src/wiki-example.txt - Example text of wiki article format.
 * documents/src/wikiFiles/* - All wikipedia articles to be queried with Watson Project.
+

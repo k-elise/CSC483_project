@@ -192,37 +192,36 @@ public class index {
 					i++;
 				} else {// if i = 3 , which is a new line
 					i = 0;
+					// tokenizing, removing stopwords on the content and queries
 					Analyzer analyzer = new EnglishAnalyzer();
-					
-				//	content = removeStopWords(tokenizeString(analyzer,content));
 					content = removeStopWords((tokenizeString(analyzer,content)));
-					category = category.split("\\(")[0];
-					category = removeStopWords(tokenizeString(analyzer,category));
+					category = category.split("\\(")[0];// removing the (alex: ... ) part of the categories
+					category = removeStopWords(tokenizeString(analyzer,category)); 
 					System.out.println("RUNNING QUERY "+total);
 					double curRank = ind.runner(category, content, answer);
-					if(curRank!= 0) {
+					if(curRank!= 0) {// taking the reciprocal of the current rank ( 0 stays as 0 )
 						curRank = 1/curRank;
 					}
 					
-					sum = curRank+sum;
-					total += 1;
+					sum = curRank+sum;// adding reciprocal to the sum
+					total += 1;// counting the number of querues
 				}
 
 			}
 		}
-		System.out.println("MRR SCORE: "+(double)(sum/total));
+		System.out.println("MRR SCORE: "+(double)(sum/total));// printing out the MRR , reciprocal sum / number of queries
 			//System.out.println("GOT "+sum+" OUT OF "+total);
 	}
 
 	public int runner(String category, String content, String answer)
 			throws java.io.FileNotFoundException, java.io.IOException {
-	String querystr = "content: " + content + " category: " + category;
+	String querystr = "content: " + content + " category: " + category;// query searching the content and category
 		//String querystr = "(content: " + content + " category: " + category+")^2.0f OR content: " + content ;
 		IndexReader reader = null;
 		IndexSearcher searcher = null;
 		ScoreDoc[] hits = null;
 	
-		int rank =0;
+		int rank =0;// setting the base rank if not found then its 0 
 		if (!indexExists) {
 
 			buildIndex();
@@ -231,7 +230,7 @@ public class index {
 		try {
 
 			Query q = new QueryParser("content", analyzer).parse(querystr);
-			int hitsPerPage = 10;
+			int hitsPerPage = 10;// getting top 10 hits for the query 
 			reader = DirectoryReader.open(index);
 			searcher = new IndexSearcher(reader);
 			TopDocs docs = searcher.search(q, hitsPerPage);
@@ -244,10 +243,10 @@ public class index {
 				int docId = hits[i].doc;
 				Document d = searcher.doc(docId);
 				System.out.println((i + 1) + ". " + d.get("title")); // + "\t" + hits[i].score);
-				if(d.get("title").trim().equals(answer.trim())) {
+				if(d.get("title").trim().equals(answer.trim())) {// if the document in the top 10 is the right answer
 					
-						rank = i+1;
-					
+						rank = i+1;// its rank is its position +1 ( base 1 indexing)
+	
 				}
 			}
 //			System.out.println("number 1:"+searcher.doc(hits[0].doc).get("title").trim());
@@ -256,7 +255,7 @@ public class index {
 //			if(searcher.doc(hits[0].doc).get("title").trim() == answer.trim()) {
 //				rank = 1;
 //			}
-				System.out.println("Answer is :"+answer+" Rank is :"+rank);
+				System.out.println("Answer is :"+answer+" Rank is :"+rank); // printing out the answer to the query and the rank it was at in the doc
 			return rank;
 
 		} catch (ParseException e) {

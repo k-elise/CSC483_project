@@ -1378,6 +1378,6 @@ Found 10 hits.
 9. Jimmy Harry
 10. Basil Rathbone
 Answer is :Robert Downey, Jr. Rank is :0
-MRR SCORE: 0.2941785714285714
+MRR SCORE @ 10: 0.2941785714285714
 P@1: 22.0
 P@10: 48.0

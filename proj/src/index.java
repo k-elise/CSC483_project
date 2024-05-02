@@ -46,7 +46,7 @@ public class index {
 		String content = "";
 		ClassLoader classLoader = getClass().getClassLoader();
 		config.setSimilarity(new ClassicSimilarity());
-		File[] files = new File(classLoader.getResource("wikiFiles").getFile()).listFiles();
+		File[] files = new File(classLoader.getResource("wikiFiles2").getFile()).listFiles();
 		IndexWriter w = null;
 
 		try {

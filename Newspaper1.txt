@@ -1,0 +1,21 @@
+NEWSPAPERS
+The dominant paper in our nation's capital, it's among the top 10 U.S. papers in circulation
+The Washington Post
+
+public static String removeStopWords(String textFile) throws Exception {
+		String answer = "";
+	    CharArraySet stopWords = EnglishAnalyzer.getDefaultStopSet();
+	   // TokenStream tokenStream = new StandardTokenizer();
+	    Analyzer analyzer = new  EnglishAnalyzer(stopWords);
+	    TokenStream tokenStream = analyzer.tokenStream(null, new StringReader(textFile));
+	    CharTermAttribute term = tokenStream.addAttribute(CharTermAttribute.class);
+	    tokenStream.reset();
+	 
+	    while (tokenStream.incrementToken()) {
+	        String terms = (tokenStream.getAttribute(CharTermAttribute.class).toString());
+	        answer+= terms + " ";
+	    }
+	    tokenStream .close();
+	    
+	    return answer;
+	}

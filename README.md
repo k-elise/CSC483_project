@@ -23,6 +23,7 @@ To view our document and/or powerpoint, please go to documents/final_docs
 *    README.md - File containing relevant information regarding project.
 *    proj - A file holding actual code for project and other items.
 *    final_docs.txt - Contains link to our document of error analysis, measuring performance, grade defense as well as powerpoint.
+*    mrr_txt. - Contains MRR@100 results.
 *    PrecisionMRROut.txt - Contains P@1, P@10, and MRR@10 results.
 *    proj/src/index.java - Watson Project that implements our try at solving Jeopardy.
 *    proj/src/wiki-example.txt - Example text of wiki article format.

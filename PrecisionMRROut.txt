@@ -1,0 +1,1383 @@
+RUNNING QUERY 0
+working on file 0: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0005.txt
+working on file 1: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0006.txt
+working on file 2: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0007.txt
+working on file 3: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0009.txt
+working on file 4: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0013.txt
+working on file 5: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0014.txt
+working on file 6: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0016.txt
+working on file 7: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0017.txt
+working on file 8: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0018.txt
+working on file 9: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0020.txt
+working on file 10: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0021.txt
+working on file 11: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0022.txt
+working on file 12: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0025.txt
+working on file 13: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0026.txt
+working on file 14: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0032.txt
+working on file 15: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0033.txt
+working on file 16: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0034.txt
+working on file 17: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0035.txt
+working on file 18: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0039.txt
+working on file 19: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0040.txt
+working on file 20: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0042.txt
+working on file 21: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0043.txt
+working on file 22: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0048.txt
+working on file 23: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0049.txt
+working on file 24: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0051.txt
+working on file 25: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0052.txt
+working on file 26: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0053.txt
+working on file 27: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0054.txt
+working on file 28: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0057.txt
+working on file 29: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0058.txt
+working on file 30: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0062.txt
+working on file 31: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0067.txt
+working on file 32: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0087.txt
+working on file 33: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0088.txt
+working on file 34: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0093.txt
+working on file 35: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0095.txt
+working on file 36: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0098.txt
+working on file 37: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0099.txt
+working on file 38: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0100.txt
+working on file 39: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0103.txt
+working on file 40: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0115.txt
+working on file 41: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0123.txt
+working on file 42: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0124.txt
+working on file 43: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0125.txt
+working on file 44: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0128.txt
+working on file 45: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0129.txt
+working on file 46: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0130.txt
+working on file 47: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0131.txt
+working on file 48: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0132.txt
+working on file 49: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0136.txt
+working on file 50: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0146.txt
+working on file 51: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0151.txt
+working on file 52: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0153.txt
+working on file 53: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0174.txt
+working on file 54: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0185.txt
+working on file 55: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0203.txt
+working on file 56: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0215.txt
+working on file 57: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0216.txt
+working on file 58: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0226.txt
+working on file 59: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0268.txt
+working on file 60: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0348.txt
+working on file 61: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0363.txt
+working on file 62: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0540.txt
+working on file 63: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0555.txt
+working on file 64: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0567.txt
+working on file 65: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0593.txt
+working on file 66: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0597.txt
+working on file 67: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0689.txt
+working on file 68: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0714.txt
+working on file 69: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0766.txt
+working on file 70: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0806.txt
+working on file 71: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0813.txt
+working on file 72: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0833.txt
+working on file 73: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0841.txt
+working on file 74: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0856.txt
+working on file 75: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0964.txt
+working on file 76: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-0985.txt
+working on file 77: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-1069.txt
+working on file 78: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-1129.txt
+working on file 79: C:\Users\Josia\Documents\gitrepos\CSC483_project\target\classes\wikiFiles2\enwiki-20140602-pages-articles.xml-1259.txt
+Found 10 hits.
+1. Media of the United States
+2. Irish Independent
+3. Svenska Dagbladet
+4. Star Tribune
+5. Sun-Sentinel
+6. The New York Sun
+7. Los Angeles Times
+8. Al-Quds Al-Arabi
+9. Daily Worker
+10. List of newspapers in Hong Kong
+Answer is :The Washington Post Rank is :0
+RUNNING QUERY 1
+Found 10 hits.
+1. United Nations General Assembly Resolution 505
+2. Taiwan Relations Act
+3. Taiwanization
+4. Lin Sen
+5. Taiwan
+6. Kinmen
+7. United Nations Security Council Resolution 940
+8. History of the Republic of China
+9. Iraq disarmament crisis
+10. One-China policy
+Answer is :Taiwan Rank is :5
+RUNNING QUERY 2
+Found 10 hits.
+1. The Wall Street Journal
+2. The Hutchinson News
+3. The Atlanta Journal-Constitution
+4. The Baltimore Sun
+5. Hedrick Smith
+6. Los Angeles Times
+7. Yellow journalism
+8. Sun-Sentinel
+9. Orange County Business Journal
+10. Hanson W. Baldwin
+Answer is :The Wall Street Journal Rank is :1
+RUNNING QUERY 3
+Found 10 hits.
+1. Bess, You Is My Woman Now
+2. An Invitation to Lubberland
+3. Friends, Romans, countrymen, lend me your ears
+4. Haifa (musician)
+5. I Hope You Dance (song)
+6. Starlight Express
+7. National anthem of Yemen
+8. Keyshia Cole
+9. Jason Robert Brown
+10. Baul
+Answer is :My Funny Valentine Rank is :0
+RUNNING QUERY 4
+Found 10 hits.
+1. The Salvation Army
+2. Change ringing
+3. Aloysius Society
+4. Pró-Vida
+5. Donation
+6. Capital (radio network)
+7. Goodwill Industries
+8. Mikael Tariverdiev
+9. Campanology
+10. Chadlington
+Answer is :The Salvation Army|Salvation Army Rank is :1
+RUNNING QUERY 5
+Found 10 hits.
+1. Jen Stark
+2. Utah Museum of Fine Arts
+3. Ural Tansykbayev
+4. Terra Museum
+5. Konrad Grob
+6. Appleton Museum of Art
+7. Maryhill Museum of Art
+8. Art museum
+9. Cape Cod Museum of Art
+10. Roman De Salvo
+Answer is :Florida Rank is :0
+RUNNING QUERY 6
+Found 10 hits.
+1. Nicola Cianfanelli
+2. Lorenzo Monaco
+3. Dirk Stoop
+4. Tintoretto
+5. Antonio da Correggio
+6. Carlo Dolci
+7. Raffaello Gambogi
+8. Pieter Codde
+9. Francesco di Vannuccio
+10. Master of the Khanenko Adoration
+Answer is :Tintoretto Rank is :4
+RUNNING QUERY 7
+Found 10 hits.
+1. Jackie Joyner-Kersee
+2. George Stanich
+3. University of California, Los Angeles
+4. Cy Young (athlete)
+5. Kareem Abdul-Jabbar
+6. Men's Gym
+7. Julie Dash
+8. George Jefferson (athlete)
+9. Greg Foster (hurdler)
+10. Lyudmyla Blonska
+Answer is :Jackie Joyner-Kersee Rank is :1
+RUNNING QUERY 8
+Found 10 hits.
+1. De Poelen, Dronrijp
+2. De Mearmin, Dokkum
+3. Chevrolet Celebrity
+4. Spoke
+5. Penny-farthing
+6. Webster's Mill, Framsden
+7. Emblem of Angola
+8. Hammer and sickle
+9. Holden Gemini
+10. Wheel
+Answer is :Rotary International Rank is :0
+RUNNING QUERY 9
+Found 10 hits.
+1. Khartoum
+2. Cairo
+3. Kosti, Sudan
+4. Nile
+5. Omdurman
+6. Pan-American Highway (North America)
+7. Anshun Bridge
+8. Faiyum Oasis
+9. List of people from Augusta, Georgia
+10. Toriel
+Answer is :Cairo Rank is :2
+RUNNING QUERY 10
+Found 10 hits.
+1. Hubert Lyautey
+2. Philippe Pétain
+3. Anglo-French Supreme War Council
+4. Charles V of France
+5. Free French Forces
+6. Lorraine (duchy)
+7. Argenis
+8. War of the Sixth Coalition
+9. Polish contribution to World War II
+10. Foreign alliances of France
+Answer is :Charles de Gaulle|de Gaulle Rank is :0
+RUNNING QUERY 11
+Found 10 hits.
+1. Anders Zorn
+2. Utah Museum of Fine Arts
+3. Ural Tansykbayev
+4. Terra Museum
+5. Appleton Museum of Art
+6. Maryhill Museum of Art
+7. Art museum
+8. Cape Cod Museum of Art
+9. Roman De Salvo
+10. Akio Takamori
+Answer is :Ohio Rank is :0
+RUNNING QUERY 12
+Found 10 hits.
+1. USS Arizona Memorial
+2. Thomas W. Lawson (ship)
+3. Frank Newcomb
+4. Margate Surfboat
+5. Edwin M. Shepard
+6. USS Bonhomme Richard (LHD-6)
+7. Panayis Athanase Vagliano
+8. USCGC Mohawk (WPG-78)
+9. Brookwood Cemetery
+10. USS Irene Forsyte (IX-93)
+Answer is :Arlington National Cemetery|Arlington Cemetery Rank is :0
+RUNNING QUERY 13
+Found 10 hits.
+1. Jimmy Harry
+2. Joan Plowright
+3. Miranda Richardson
+4. Rita Blanco
+5. Paul Le Mat
+6. Olympia Dukakis
+7. Geoffrey Rush
+8. Warren Beatty
+9. 1988 in film
+10. Chaim Topol
+Answer is :Heath Ledger Rank is :0
+RUNNING QUERY 14
+Found 10 hits.
+1. Vicente Genaro de Quesada
+2. Godfrey Macdonald, 3rd Baron Macdonald of Slate
+3. Alexander Gordon (British cavalry officer)
+4. Ferdinand VII of Spain
+5. Battle of Roliça
+6. War of the Sixth Coalition
+7. Napoleonic Wars
+8. Edward John Eliot
+9. FitzRoy Somerset, 1st Baron Raglan
+10. Jacob Hufty
+Answer is :Iberia|Iberian Peninsula Rank is :0
+RUNNING QUERY 15
+Found 10 hits.
+1. Oil reserves in Southeast Asia
+2. Toei Fushigi Comedy Series
+3. Monteverde Cloud Forest Reserve
+4. Xiang Xiang (giant panda)
+5. Wolong Temple
+6. Phyllostachys
+7. Kawaii
+8. Anji County
+9. Chengdu
+10. Environmental movement
+Answer is :Panda|Giant panda Rank is :0
+RUNNING QUERY 16
+Found 10 hits.
+1. Schweizer SGS 1-24
+2. Marley Marl
+3. Mathieu Dossevi
+4. Them Again
+5. Tim Higgins
+6. Remo Brindisi
+7. Akio Takamori
+8. Judith Barsi
+9. Thomas J. Quinlan
+10. Brian Brown (musician)
+Answer is :George Michael Rank is :0
+RUNNING QUERY 17
+Found 10 hits.
+1. Medgar Evers
+2. Penny Marshall
+3. Myrna Loy
+4. Julie Dash
+5. The Help
+6. Shirley MacLaine
+7. Bend It Like Beckham
+8. Meagan Good
+9. Debbi Morgan
+10. Amy Tan
+Answer is :The Help Rank is :5
+RUNNING QUERY 18
+Found 10 hits.
+1. Knights of Columbus
+2. Lambda Theta Phi
+3. K.A.V. Lovania Leuven
+4. Studentenverbindung
+5. Cartellverband
+6. Thomas Wyatt Turner
+7. Josephite Fathers
+8. Omega Psi Phi
+9. Order of Chosen Friends
+10. Pi Alpha Phi
+Answer is :Knights of Columbus Rank is :1
+RUNNING QUERY 19
+Found 10 hits.
+1. United States Fish and Wildlife Service
+2. Kratié (town)
+3. Guadalajara Zoo
+4. Tundi Spring Agardy
+5. Red wolf
+6. Maasai Mara
+7. Steve Lombardi
+8. Edward Max Nicholson
+9. Itasca State Park
+10. Ecoregion
+Answer is :World Wide Fund|World Wide Fund for Nature Rank is :0
+RUNNING QUERY 20
+Found 10 hits.
+1. Dragon (Middle-earth)
+2. Alaungdaw Kathapa National Park
+3. Bloom County
+4. Cape Grass Lizard
+5. Komodo dragon
+6. Ecology movement
+7. United Kingdom general election, February 1974
+8. Varan
+9. Chagos Marine Protected Area
+10. Tony Fitzjohn
+Answer is :Komodo dragon Rank is :5
+RUNNING QUERY 21
+Found 10 hits.
+1. Home Fleet
+2. Edwyn Alexander-Sinclair
+3. Keith Park
+4. George Hyde (admiral)
+5. Leonard Holbrook
+6. Wilson Flagg
+7. Earl R. Southee
+8. David Murray Anderson
+9. Sandy Woodward
+10. Alan Shepard
+Answer is :Richard Byrd|Richard E. Byrd Rank is :0
+RUNNING QUERY 22
+Found 10 hits.
+1. Boot Hill
+2. Panteón de Dolores
+3. William S. Gregory
+4. Ross Bay Cemetery
+5. Edwin M. Shepard
+6. Almon Brown Strowger
+7. Cemetery
+8. James E. Davis (councilman)
+9. Samuel Medary
+10. Brompton Cemetery
+Answer is :Boot Hill Rank is :1
+RUNNING QUERY 23
+Found 10 hits.
+1. Politics of Cambodia
+2. History of Cambodia
+3. Norodom Buppha Devi
+4. List of heads of state of Cambodia
+5. Reamker
+6. Capital of the Netherlands
+7. History of Nepal
+8. History of Buda Castle
+9. Coudenberg
+10. Kingdom of Tahiti
+Answer is :France Rank is :0
+RUNNING QUERY 24
+Found 10 hits.
+1. Zhang Binglin
+2. List of British Columbia provincial highways
+3. Chinese classics
+4. Bernhard Karlgren
+5. Zitong County
+6. Zhu Rong (god)
+7. Chinese philosophy
+8. Numerology
+9. Alexandre Deulofeu
+10. Tōten Miyazaki
+Answer is :Confucius Rank is :0
+RUNNING QUERY 25
+Found 10 hits.
+1. Bessie Coleman
+2. Pilot (aeronautics)
+3. Edith S. Sampson
+4. Ida Cox
+5. Jean Burns
+6. Lucille Bogan
+7. Victoria Earle Matthews
+8. Eileen Collins
+9. Lani Guinier
+10. Lorna Simpson
+Answer is :O'Hare|O'Hare International Airport Rank is :0
+RUNNING QUERY 26
+Found 10 hits.
+1. Rabbah
+2. Raichur district
+3. Ammonoidea
+4. Historical school of economics
+5. Nikolaiviertel
+6. Capital Country
+7. Kandahar Province
+8. Principality
+9. Hildoceras
+10. Płock
+Answer is :Jordan Rank is :0
+RUNNING QUERY 27
+Found 10 hits.
+1. Peter Shaffer
+2. Helen Hunt
+3. Tim Ryan (rugby union)
+4. John Huston
+5. Billy Wilder
+6. William Goldman
+7. Jack Nicholson
+8. The Last Detail
+9. I. A. L. Diamond
+10. Elmer Bernstein
+Answer is :Ben Affleck Rank is :0
+RUNNING QUERY 28
+Found 10 hits.
+1. Miller v. California
+2. R. v. Owen
+3. Morris Pashman
+4. Griswold v. Connecticut
+5. Canada v. Schmidt
+6. New York Supreme Court
+7. Frendak v. United States
+8. Martin v. Hunter's Lessee
+9. Ford v. Quebec (Attorney General)
+10. Gideon v. Wainwright
+Answer is :Roe v. Wade Rank is :0
+RUNNING QUERY 29
+Found 10 hits.
+1. Philip IV of France
+2. Knights Templar
+3. Ferdinand IV of Castile
+4. Louis X of France
+5. Victor Amadeus I, Duke of Savoy
+6. Charles IV of France
+7. Humbert de Pairaud
+8. Lamoral, 1st Prince of Ligne
+9. Charles Emmanuel I, Duke of Savoy
+10. Philip V of France
+Answer is :Knights Templar Rank is :2
+RUNNING QUERY 30
+Found 10 hits.
+1. Dan Budnik
+2. Alfred Stieglitz
+3. Louvre Atlanta
+4. Old Governor's Mansion (Milledgeville, Georgia)
+5. National Museum of Commercial Aviation
+6. Fort James Jackson
+7. Dorchester Academy
+8. Juliette Gordon Low Historic District
+9. Tullie Smith House
+10. Joel Chandler Harris House
+Answer is :New Mexico Rank is :0
+RUNNING QUERY 31
+Found 10 hits.
+1. Perejil Island
+2. Melilla
+3. Leo Africanus
+4. Casablanca
+5. Londrina
+6. Extremadura
+7. Oran
+8. Arecibo, Puerto Rico
+9. History of Western Sahara
+10. Malabo
+Answer is :Casablanca Rank is :4
+RUNNING QUERY 32
+Found 10 hits.
+1. Jell-O
+2. Jello mold
+3. Jelling stones
+4. Olive loaf
+5. Camp Roger
+6. Cold Stone Creamery
+7. Dietrich Jells
+8. Mindshare (firm)
+9. Arch West
+10. Mac's Convenience Stores
+Answer is :Kraft Foods Rank is :0
+RUNNING QUERY 33
+Found 10 hits.
+1. Olympia Dukakis
+2. Cybill
+3. Tom Wilkinson
+4. Matt LeBlanc
+5. Delores Taylor
+6. Miranda Richardson
+7. Christopher McQuarrie
+8. Celeste Holm
+9. Larry McMurtry
+10. The Secret of Santa Vittoria
+Answer is :Kelsey Grammer Rank is :0
+RUNNING QUERY 34
+Found 10 hits.
+1. Animal House
+2. Bluto
+3. Flounder
+4. Scott & Muriel
+5. Claudia Galli
+6. Ford Pinto
+7. Gigging
+8. A Night to Remember (1942 film)
+9. Lyall Brooks
+10. Cheech & Chong
+Answer is :Animal House Rank is :1
+RUNNING QUERY 35
+Found 10 hits.
+1. Mayim Bialik
+2. Amy Fowler
+3. Andrea M. Ghez
+4. Howard Wolowitz
+5. Steven Loza
+6. Virginia Louise Trimble
+7. Mighty Bruins
+8. Raj Koothrappali
+9. Randall Crane
+10. Kamran Khavarani
+Answer is :Mayim Bialik Rank is :1
+RUNNING QUERY 36
+Found 10 hits.
+1. Aaron Burr
+2. Richard Mentor Johnson
+3. George Clinton (vice president)
+4. Vice President of the United States
+5. Daniel D. Tompkins
+6. Republican Party presidential primaries, 1976
+7. Virginia dynasty
+8. Society of the Army of Santiago de Cuba
+9. United States presidential election in South Dakota, 1988
+10. Massachusetts Democratic Party
+Answer is :Aaron Burr Rank is :1
+RUNNING QUERY 37
+Found 10 hits.
+1. Keizō Obuchi
+2. Vladimir Alganov
+3. Government of Kazakhstan
+4. August Zaleski
+5. Prime Minister of France
+6. Vladimir Putin
+7. President of Turkey
+8. Politics of Russia
+9. Takahashi Korekiyo
+10. Ivan Goremykin
+Answer is :Vladimir Putin|Putin Rank is :6
+RUNNING QUERY 38
+Found 10 hits.
+1. Michelle Obama
+2. Octavia E. Butler
+3. Sasha Pieterse
+4. Liz Malia
+5. Gertrud Månsson
+6. Ruth Ella Moore
+7. Deborah Sampson
+8. Spinning Into Butter
+9. Theodate Pope Riddle
+10. Frances P. Bolton
+Answer is :Michelle Obama Rank is :1
+RUNNING QUERY 39
+Found 10 hits.
+1. Mihri Hatun
+2. Sonnet 133
+3. Anna Akhmatova
+4. Henry Wadsworth Longfellow
+5. John Keats
+6. Conceit
+7. Betty Thatcher
+8. Emily Dickinson
+9. My Best Friend's Wedding
+10. Ogden Nash
+Answer is :Edna St. Vincent Millay Rank is :0
+RUNNING QUERY 40
+Found 10 hits.
+1. Savonlinna
+2. Porvoo
+3. Mikael Agricola
+4. Rybinsk
+5. Tampere
+6. Finnish Orthodox Church
+7. Magdeburg
+8. Espoo
+9. Turku
+10. Golden Ring
+Answer is :Helsinki Rank is :0
+RUNNING QUERY 41
+Found 10 hits.
+1. Microvision
+2. Battleship (game)
+3. Axis & Allies
+4. Vectrex
+5. Hasbro
+6. Snakes and Ladders
+7. Shawn Bradley
+8. Crayon
+9. Snake (video game)
+10. Magnavox Odyssey
+Answer is :Hasbro Rank is :5
+RUNNING QUERY 42
+Found 10 hits.
+1. Kentucky and Virginia Resolutions
+2. Second Continental Congress
+3. Richard Henry Lee
+4. Stamp Act 1765
+5. Copyright Act of 1790
+6. Congressional Budget and Impoundment Control Act of 1974
+7. History of slavery in Indiana
+8. Patrick Henry
+9. Authorization for Use of Military Force Against Terrorists
+10. Big Sandy River (Ohio River)
+Answer is :The Alien and Sedition Acts Rank is :0
+RUNNING QUERY 43
+Found 10 hits.
+1. Them Again
+2. Fontana Records
+3. Black Milk
+4. Fred Davis (snooker player)
+5. 1983 BDO World Darts Championship
+6. 2009 Turkish Cup Final
+7. Juan López Fontana
+8. Cliff Thorburn
+9. Jimmy Somerville
+10. Kelowna Spartans
+Answer is :Michael Jackson Rank is :0
+RUNNING QUERY 44
+Found 10 hits.
+1. True Blood
+2. Anna Paquin
+3. Jimmy Harry
+4. Joan Plowright
+5. Miranda Richardson
+6. Olympia Dukakis
+7. Rita Blanco
+8. Geoffrey Rush
+9. Paul Le Mat
+10. Warren Beatty
+Answer is :Anna Paquin Rank is :2
+RUNNING QUERY 45
+Found 10 hits.
+1. William B. Saxbe
+2. Théophile Delcassé
+3. Hidejirō Nagata
+4. Helmut Sturm
+5. 1st government of Turkey
+6. Frank B. Kellogg
+7. Emil Wallber
+8. Henry Kissinger
+9. Arthur Sauvé
+10. Otto Schily
+Answer is :Henry Kissinger Rank is :8
+RUNNING QUERY 46
+Found 10 hits.
+1. John Knox
+2. Stobo Kirk
+3. Glasgow Cathedral
+4. Church of Scotland
+5. Queen's Hall, Edinburgh
+6. Rivers of Life, Oxford
+7. Scottish Episcopal Church
+8. William Whittingham
+9. Presbyterian polity
+10. John Urquhart Cameron
+Answer is :Edinburgh Rank is :0
+RUNNING QUERY 47
+Found 10 hits.
+1. Kevin Weisman
+2. James Dean
+3. Richard Thomas (actor)
+4. Grant Show
+5. Jamie King (actor)
+6. Richard Simmons (actor)
+7. Guy Kawasaki
+8. Alexis Denisof
+9. Len Cariou
+10. Michael Crawford
+Answer is :James Dean Rank is :2
+RUNNING QUERY 48
+Found 10 hits.
+1. Little People
+2. Toy Town Museum
+3. Buzzy Bee
+4. Mattel
+5. Hasbro
+6. Arthur Treacher's
+7. Learning Express Toys
+8. Agglo
+9. Circus World (store)
+10. Jean-Pierre Abbat
+Answer is :Mattel Rank is :4
+RUNNING QUERY 49
+Found 10 hits.
+1. American National Exhibition
+2. Cuban missile crisis
+3. Yuri Zhukov (journalist)
+4. Robert Frank
+5. Vittorio De Sica
+6. Esfir Shub
+7. Davis Phinney
+8. Ray Singleton
+9. K Blows Top
+10. Jesse Barfield
+Answer is :Richard Nixon|Nixon Rank is :0
+RUNNING QUERY 50
+Found 10 hits.
+1. Cornelia Hoogland
+2. Baxter Black
+3. Acrostic
+4. Henry Wadsworth Longfellow
+5. Alliteration
+6. John Masefield
+7. William Dawes
+8. Third Nephi
+9. Are You Afraid of the Dark?
+10. Language of flowers
+Answer is :Henry Wadsworth Longfellow Rank is :4
+RUNNING QUERY 51
+Found 10 hits.
+1. Game Change
+2. Ed O'Callaghan
+3. Mark McKinnon
+4. Democratic Party vice presidential candidate selection, 2004
+5. Gina Gershon
+6. Mike Scott (sheriff)
+7. Shuckin' and jivin'
+8. Joe Lieberman
+9. Mark Paoletta
+10. Gene Lyons
+Answer is :Game Change Rank is :1
+RUNNING QUERY 52
+Found 10 hits.
+1. Bozo the Clown
+2. James Harmon Brown and Barbara Esensten
+3. Gunsmoke
+4. Cold Feet
+5. The Defenders (1961 TV series)
+6. List of Being Human episodes
+7. Explorers of the Human Body
+8. Doctors (soap opera)
+9. List of The X-Files episodes
+10. USS John A. Moore (FFG-19)
+Answer is :NCIS Rank is :0
+RUNNING QUERY 53
+Found 10 hits.
+1. Urbanization in Africa
+2. Port Elizabeth Airport
+3. Malabo
+4. Dakar
+5. Nacala
+6. Cape Coast
+7. Agulhas National Park
+8. Port Elizabeth
+9. Porto-Novo
+10. Transport in Lesotho
+Answer is :Cape Town Rank is :0
+RUNNING QUERY 54
+Found 10 hits.
+1. John Keats
+2. Ode
+3. Edmund Spenser
+4. Ozymandias
+5. La Belle Dame sans Merci
+6. Hyperion (poem)
+7. Edmund Blunden
+8. The Faerie Queene
+9. Blank verse
+10. Dominic Keating
+Answer is :The Faerie Queene Rank is :8
+RUNNING QUERY 55
+Found 10 hits.
+1. John Keats
+2. La Belle Dame sans Merci
+3. Hyperion (poem)
+4. Ode
+5. Robert Keate
+6. Blank verse
+7. Adonis
+8. Richard Monckton Milnes, 1st Baron Houghton
+9. Didymus Chalcenterus
+10. Keating Five
+Answer is :Lord Byron Rank is :0
+RUNNING QUERY 56
+Found 10 hits.
+1. Ouzo
+2. Liqueur
+3. Rakı
+4. List of coffee beverages
+5. List of cocktails
+6. Sicilian cuisine
+7. Rose water
+8. Feta
+9. Anise
+10. Souvlaki
+Answer is :Ouzo Rank is :1
+RUNNING QUERY 57
+Found 10 hits.
+1. Kentucky and Virginia Resolutions
+2. Equal Rights Amendment
+3. Pledge of Allegiance
+4. Henry S. Foote
+5. International Telecommunication Union
+6. Emancipation Proclamation
+7. Lambeth Conferences
+8. Second Continental Congress
+9. Israeli Declaration of Independence
+10. Joseph Gurney Cannon
+Answer is :Slavery|Slavery in the United States Rank is :0
+RUNNING QUERY 58
+Found 10 hits.
+1. Governor General of Canada
+2. Order of Military Merit (Canada)
+3. List of current Canadian first ministers
+4. At Her Majesty's pleasure
+5. Parliament of Canada
+6. Alma Mater Society of Queen's University
+7. 100 Huntley Street
+8. John David Burnes
+9. Jules Léger
+10. Lincoln Alexander
+Answer is :Governor General of Canada Rank is :1
+RUNNING QUERY 59
+Found 10 hits.
+1. Fifth Beatle
+2. George Martin
+3. Love (The Beatles album)
+4. Ringo Starr
+5. Twist and Shout
+6. The Beatles (album)
+7. Please Please Me
+8. Revolver (Beatles album)
+9. Help! (album)
+10. Rubber Soul
+Answer is :George Martin Rank is :2
+RUNNING QUERY 60
+Found 10 hits.
+1. Bret Harte
+2. Bret Harte Union High School
+3. Joaquin Miller
+4. 1860 Wiyot Massacre
+5. Lost Cement Mine
+6. Dave Meltzer
+7. A Connecticut Yankee (musical)
+8. Ken Howard
+9. A Defence of General Funston
+10. KKBN
+Answer is :San Francisco Rank is :0
+RUNNING QUERY 61
+Found 10 hits.
+1. Broad-faced potoroo
+2. Borhyaenidae
+3. Thames Barrier
+4. Marsupial mole
+5. Stejneger's beaked whale
+6. Kangaroo
+7. Fauna of Australia
+8. Pitchout
+9. Honey possum
+10. Tammar wallaby
+Answer is :Kangaroo Rank is :6
+RUNNING QUERY 62
+Found 10 hits.
+1. Feta
+2. Norwegian cuisine
+3. English cuisine
+4. Pecorino
+5. Quark (dairy product)
+6. Breakfast
+7. Mozzarella
+8. Casu marzu
+9. List of cheeses
+10. Caerphilly cheese
+Answer is :Feta Rank is :1
+RUNNING QUERY 63
+Found 10 hits.
+1. Jack Dempsey
+2. New Jersey Route 37
+3. Dan Minor
+4. MIM-46 Mauler
+5. Alexander Kolowrat
+6. Vehicle registration plates of Italy
+7. Lou Stillman
+8. Tommy Gibbons
+9. Robin Tunney
+10. Edna Ferber
+Answer is :Jack Dempsey Rank is :1
+RUNNING QUERY 64
+Found 10 hits.
+1. Duce
+2. Romano Mussolini
+3. Clara Petacci
+4. Predappio
+5. Fascist and anti-Fascist violence in Italy (1919–26)
+6. Alessandra Mussolini
+7. Agostino Lanzillo
+8. Fascism in Europe
+9. Esercito Nazionale Repubblicano
+10. Luigi Barzini, Jr.
+Answer is :Duce Rank is :1
+RUNNING QUERY 65
+Found 10 hits.
+1. Terra Museum
+2. Akio Takamori
+3. Portland Institute for Contemporary Art
+4. Utah Museum of Fine Arts
+5. Rachelle Thiewes
+6. Kenneth Josephson
+7. Ian Hornak
+8. Daniel J. Terra
+9. Walker Art Center
+10. Art museum
+Answer is :Michigan Rank is :0
+RUNNING QUERY 66
+Found 10 hits.
+1. John Rais
+2. Xochicalco
+3. Janet Biggs
+4. Julia Davis Park
+5. Judy Fiskin
+6. Walker Art Center
+7. Arthouse at The Jones Center
+8. Collins Center for the Arts
+9. Cape Cod Museum of Art
+10. Duane Johnson
+Answer is :Idaho Rank is :0
+RUNNING QUERY 67
+Found 10 hits.
+1. Triple play
+2. Hughie Jennings
+3. Joe Tinker
+4. Double play
+5. Nicholas Tooley
+6. Gene Alley
+7. A Few Questions
+8. Nelson Norman
+9. Charlie Gehringer
+10. Honus Wagner
+Answer is :Joe Tinker Rank is :3
+RUNNING QUERY 68
+Found 10 hits.
+1. Horace Greeley
+2. Anti-Masonic Party
+3. The Day (New London)
+4. Schuyler Colfax
+5. William Henry Harrison
+6. The Telegraph (Nashua)
+7. Sun-Sentinel
+8. Boston Daily Advertiser
+9. Gringoire (newspaper)
+10. Willie Person Mangum
+Answer is :William Henry Harrison Rank is :5
+RUNNING QUERY 69
+Found 10 hits.
+1. Roman Catholic Diocese of Beauvais
+2. Joan of Arc
+3. Beauvais
+4. Medieval Inquisition
+5. Wilfried Louisy-Daniel
+6. Jean Houymet
+7. Mount Pelée
+8. William Elphinstone
+9. Sandra Bernhard
+10. Joseph Kabila
+Answer is :Joan of Arc|Jeanne d'Arc Rank is :2
+RUNNING QUERY 70
+Found 10 hits.
+1. Gendarmenmarkt
+2. Saint Isaac's Cathedral
+3. Yosemite Valley
+4. Corcovado
+5. Frank Zeidler
+6. El Capitolio
+7. Usa, Ōita
+8. St. Adalbert's Church (Milwaukee)
+9. Industrial archaeology of Dartmoor
+10. Volkshalle
+Answer is :Madison Rank is :0
+RUNNING QUERY 71
+Found 10 hits.
+1. The Atlanta Journal-Constitution
+2. Stylish Century
+3. Rome News-Tribune
+4. The Five Orange Pips
+5. International New York Times
+6. AJC
+7. Metropolis Daily
+8. Daily Worker
+9. BVI Beacon
+10. Wallace Carlson
+Answer is :The Atlanta Journal-Constitution Rank is :1
+RUNNING QUERY 72
+Found 10 hits.
+1. Monrovia
+2. Americo-Liberian
+3. Yablanski House
+4. History of Liberia
+5. Liberia
+6. Foreign relations of Liberia
+7. William R. Tolbert, Jr.
+8. Flag of Liberia
+9. Dutchess Company Superintendent's House
+10. Economy of Liberia
+Answer is :Monrovia Rank is :1
+RUNNING QUERY 73
+Found 10 hits.
+1. Snug Harbor (jazz club)
+2. Mercedes-Benz Superdome
+3. Wesley Barrow Stadium
+4. Tameside Hippodrome
+5. Saenger Theatre (New Orleans, Louisiana)
+6. Jimmy Walter
+7. Stade Mohamed V
+8. The Brewhouse Theatre & Arts Centre
+9. Xavier University of Louisiana
+10. Shrewsbury, Louisiana
+Answer is :Mercedes-Benz Superdome|The Superdome Rank is :2
+RUNNING QUERY 74
+Found 10 hits.
+1. Plunkett Donaghy
+2. 30 Rock (season 6)
+3. Wolfman Jack
+4. Cleveland Panthers
+5. Chief Hunter Jack
+6. Swansea Jack
+7. Alec Baldwin
+8. Jack Billingham
+9. Australian Idol (season 1)
+10. Bill Mumy
+Answer is :Alec Baldwin Rank is :7
+RUNNING QUERY 75
+Found 10 hits.
+1. Nellie Y. McKay
+2. Joshua Beckman
+3. Claudette Colvin
+4. Hattie Gossett
+5. Rosa Parks
+6. Mary Townsend Seymour
+7. Julie Dash
+8. Armand Lanusse
+9. Susan Nalugwa Kiguli
+10. Mary Louise Smith (civil rights activist)
+Answer is :Rosa Parks Rank is :5
+RUNNING QUERY 76
+Found 10 hits.
+1. Phil LaMarr
+2. Armin Shimerman
+3. Bill Mumy
+4. Raiden (Metal Gear)
+5. Peter Kenny
+6. Rolento
+7. Nick Tate
+8. Adam West
+9. Andrew Robinson (actor)
+10. Nolan Ryan
+Answer is :Harrison Ford Rank is :0
+RUNNING QUERY 77
+Found 10 hits.
+1. Izamal
+2. Altun Ha
+3. Tayasal (archaeological site)
+4. Gendarmenmarkt
+5. Augustin de Lestrange
+6. Isidore of Miletus
+7. The Eighth Reveals the Ninth
+8. Cologne Cathedral
+9. Dynamic HTML
+10. Roman Baths of Ankara
+Answer is :Dome of the Rock Rank is :0
+RUNNING QUERY 78
+Found 10 hits.
+1. The Other Man's Grass Is Always Greener
+2. Flag of Paraguay
+3. Arthur Porges
+4. Squeegee man
+5. Locke the Superman
+6. Injustice Gang
+7. Them Again
+8. Mathieu Dossevi
+9. The Psychedelic Furs
+10. Tim Higgins
+Answer is :Michael Jackson Rank is :0
+RUNNING QUERY 79
+Found 10 hits.
+1. Mayerling
+2. History of Buda Castle
+3. Votive Church, Vienna
+4. Saint Matthias
+5. Church of St. Martin de Porres (Poughkeepsie, New York)
+6. Huedin
+7. Olomouc
+8. Baden bei Wien
+9. Franz Xaver Witt
+10. John Moore (Methodist bishop)
+Answer is :Budapest Rank is :0
+RUNNING QUERY 80
+Found 10 hits.
+1. Rob Reiner
+2. Ron Pitts
+3. Gary LeRoi Gray
+4. Kevin Weisman
+5. Jason Bell (American football)
+6. Phil Austin
+7. Animal Crackers (film)
+8. Raymond Beegle
+9. Kareem Abdul-Jabbar
+10. University of California, Los Angeles
+Answer is :Rob Reiner Rank is :1
+RUNNING QUERY 81
+Found 10 hits.
+1. Hogan's Heroes
+2. John Carter (ER)
+3. Spin City
+4. Peshtigo, Wisconsin
+5. Carter Covington
+6. Episode Six
+7. List of Pennsylvania State University residence halls
+8. Libby Zion Law
+9. Whose Line Is It Anyway?
+10. Scott & Muriel
+Answer is :Hogan's Heroes Rank is :1
+RUNNING QUERY 82
+Found 10 hits.
+1. Kid Flash
+2. Flash memory
+3. Ashlyn Harris
+4. Adobe Flash
+5. ActionScript
+6. Point-and-shoot camera
+7. Kaley Fountain
+8. Belisha beacon
+9. CompactFlash
+10. Slashdot effect
+Answer is :Calvin Coolidge Rank is :0
+RUNNING QUERY 83
+Found 10 hits.
+1. Olympia Dukakis
+2. Geoffrey Rush
+3. Jim Broadbent
+4. Joan Plowright
+5. Helen Hunt
+6. Miranda Richardson
+7. Rita Blanco
+8. Warren Beatty
+9. Jimmy Harry
+10. Cybill
+Answer is :Martin Sheen Rank is :0
+RUNNING QUERY 84
+Found 10 hits.
+1. I Love the '80s Strikes Back
+2. I Love the '80s (U.S. TV series)
+3. Them Again
+4. Jean Burns
+5. Mike Stock (musician)
+6. David I. Shapiro
+7. Erin Holland
+8. Hedrick Smith
+9. I've Got Two Legs
+10. A Flock of Seagulls
+Answer is :Janet Jackson Rank is :0
+RUNNING QUERY 85
+Found 10 hits.
+1. Mehmed VI
+2. Far Eastern Republic
+3. Christophor Araratov
+4. History of Armenia
+5. Muhammad Ali al-Abid
+6. Austrian krone
+7. Trabzon
+8. Van, Turkey
+9. Mexico–Turkey relations
+10. Galactic Empire (Star Wars)
+Answer is :Ottoman Empire Rank is :0
+RUNNING QUERY 86
+Found 10 hits.
+1. Crest (toothpaste)
+2. Toothpaste
+3. Air India (football club)
+4. Crest Capital
+5. Procter & Gamble
+6. MTX Audio
+7. Crested Shelduck
+8. Nyctosaurus
+9. Republican River
+10. Priory Vale
+Answer is :Procter & Gamble Rank is :5
+RUNNING QUERY 87
+Found 10 hits.
+1. Theobald von Bethmann-Hollweg
+2. Enabling Act of 1933
+3. Reichstag Fire Decree
+4. Georg Michaelis
+5. Wilhelm II, German Emperor
+6. Heinrich Brüning
+7. Fritz Sauckel
+8. German idealism
+9. Fear and Trembling
+10. Conversations with God
+Answer is :Otto von Bismarck|Von Bismarck Rank is :0
+RUNNING QUERY 88
+Found 10 hits.
+1. Agis of Argos
+2. Thomas Warton
+3. Bliss Carman
+4. Ibycus
+5. Andrei Mureșanu
+6. David Bromige
+7. Johann Mayrhofer
+8. Irish poetry
+9. Simonides of Ceos
+10. Friedrich Hölderlin
+Answer is :William Wordsworth Rank is :0
+RUNNING QUERY 89
+Found 10 hits.
+1. Politics of Cambodia
+2. Norodom Buppha Devi
+3. History of Cambodia
+4. Cambodia National and Provincial Resources Data Bank
+5. Economy of Cambodia
+6. Siem Reap
+7. Khmer Rouge
+8. Khmer language
+9. Chaeng Mean Chey
+10. Party of Democratic Kampuchea
+Answer is :Khmer language Rank is :8
+RUNNING QUERY 90
+Found 10 hits.
+1. Olympic Stadium (Phnom Penh)
+2. Norodom Buppha Devi
+3. Transport in Cambodia
+4. History of Cambodia
+5. Khmer Rouge
+6. Music of Barbados
+7. Highways to a War
+8. Siem Reap
+9. Na Tuk Kong
+10. Telecommunications in Cambodia
+Answer is :Rickshaw Rank is :0
+RUNNING QUERY 91
+Found 10 hits.
+1. Rocky Burnette
+2. Time to Burn (Giant album)
+3. A Flock of Seagulls
+4. WAMX
+5. Night (band)
+6. Closer (Joy Division album)
+7. Them Again
+8. Rock Odyssey
+9. I Love the '80s Strikes Back
+10. Guy McDonough
+Answer is :Michael Jackson Rank is :0
+RUNNING QUERY 92
+Found 10 hits.
+1. United States presidential election in Massachusetts, 1972
+2. Nebraska's 3rd congressional district election, 2006
+3. James M. Cox
+4. Lloyd Bentsen
+5. Michael Dukakis
+6. David Plouffe
+7. William Safire
+8. Ralph Nader presidential campaign, 2000
+9. Thomas E. Dewey
+10. Lyman J. Gage
+Answer is :JFK|John F. Kennedy Rank is :0
+RUNNING QUERY 93
+Found 10 hits.
+1. B'nai B'rith
+2. Jacob and Esau
+3. Christianity and Judaism
+4. Bricket Wood
+5. Isaac K. Funk
+6. Jews as the chosen people
+7. Shekhinah
+8. Isaac Norris
+9. Samuel Hirsch
+10. Kaddish
+Answer is :B'nai B'rith Rank is :1
+RUNNING QUERY 94
+Found 10 hits.
+1. Don Knotts
+2. San Pedro, Laguna
+3. Three's Company
+4. Crinkle Crags
+5. Walter Knott
+6. William de Beauchamp (1185)
+7. Don Koharski
+8. Burwash Hall
+9. Cliveden set
+10. Rosemère, Quebec
+Answer is :Three's Company Rank is :3
+RUNNING QUERY 95
+Found 10 hits.
+1. Golan Heights
+2. Presbyterian Church (USA) disinvestment from Israel controversy
+3. Camp David Accords
+4. Israel and legitimacy
+5. Terje Rød-Larsen
+6. Annexation
+7. Israeli–Palestinian conflict
+8. United Nations Partition Plan for Palestine
+9. West Bank
+10. Politics of the Palestinian National Authority
+Answer is :The Six Day War Rank is :0
+RUNNING QUERY 96
+Found 10 hits.
+1. Heather Locklear
+2. Melrose Place
+3. Grant Show
+4. Lisa Rinna
+5. Amy Lalonde
+6. Donna Vivino
+7. Courtney Thorne-Smith
+8. Legally Blonde (musical)
+9. Pearl Eaton
+10. Susan Egan
+Answer is :Heather Locklear Rank is :1
+RUNNING QUERY 97
+Found 10 hits.
+1. Souvlaki
+2. Akçaabat meatballs
+3. Brazilian cuisine
+4. Lountza
+5. Tzatziki
+6. Kushi (skewer)
+7. Sicilian cuisine
+8. Awadhi cuisine
+9. Taste of the Danforth
+10. Serbian cuisine
+Answer is :Souvlaki Rank is :1
+RUNNING QUERY 98
+Found 10 hits.
+1. Post City Magazines
+2. Hal Film Maker
+3. Holding company
+4. Quebecor
+5. William Dean Singleton
+6. Lake Abitibi
+7. MTX Audio
+8. BibliOZ
+9. US Airways Group
+10. McLaughlin automobile
+Answer is :3M Rank is :0
+RUNNING QUERY 99
+Found 10 hits.
+1. I. A. L. Diamond
+2. Sherlock Holmes
+3. Irene Adler
+4. Hans Zimmer
+5. The Five Orange Pips
+6. Edward Hardwicke
+7. Jeremy Brett
+8. Celeste Holm
+9. Jimmy Harry
+10. Basil Rathbone
+Answer is :Robert Downey, Jr. Rank is :0
+MRR SCORE: 0.2941785714285714
+P10: 48.0
+P1: 22.0

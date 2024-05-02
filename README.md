@@ -26,3 +26,4 @@ To view our document and/or powerpoint, please go to documents/final_docs
 *    proj/src/index.java - Watson Project that implements our try at solving Jeopardy.
 *    proj/src/wiki-example.txt - Example text of wiki article format.
 *    proj/src/wikiFiles/* - All wikipedia articles to be queried with Watson Project.
+*    483 NEWS PAPER.pdf - Document containing error analysis, measuring performance, grade defense.
